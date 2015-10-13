@@ -30,7 +30,7 @@
                         <tr>
                             <td>${souvenir.id}</td>                                
                             <td><a href="${pageContext.request.contextPath}/souvenir?id=${souvenir.id}">${souvenir.name}</a></td>
-                            <td><fmt:formatNumber value="${souvenir.price}" type="currency"/></td> 
+                            <td>${souvenir.price}$</td>
                             <td><fmt:formatDate pattern="dd.MM.yyyy" value="${souvenir.madeDate}"/></td>  
                             <td><a href="${pageContext.request.contextPath}/producer?id=${souvenir.producerId}" class="btn btn-link text-warning">${souvenir.producer.name}</a></td>
                             <td><a href="${pageContext.request.contextPath}/souvenir/create?id=${souvenir.id}" class="btn btn-link text-warning">Edit</a></td>

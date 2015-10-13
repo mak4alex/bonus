@@ -30,7 +30,7 @@
                         <tr>
                             <td>${souvenir.id}</td>                                
                             <td><a href="${pageContext.request.contextPath}/souvenir?id=${souvenir.id}">${souvenir.name}</a></td>
-                            <td><fmt:formatNumber value="${souvenir.price}" type="currency"/></td> 
+                            <td>${souvenir.price}$</td>
                             <td><fmt:formatDate pattern="dd.MM.yyyy" value="${souvenir.madeDate}"/></td>  
                             <td><a href="${pageContext.request.contextPath}/souvenir/create?id=${souvenir.id}" class="btn btn-link text-warning">Edit</a></td>
                             <td class="text-danger"><a href="${pageContext.request.contextPath}/souvenir/remove?id=${souvenir.id}" class="btn btn-link text-danger">Delete</a></td>
@@ -41,6 +41,8 @@
         </c:choose>       
         <div class="panel-footer text-right">
             </p>
+            <a href="${pageContext.request.contextPath}/producer/create?id=${producer.id}" class="btn btn-link text-warning">Edit</a>
+            <a href="${pageContext.request.contextPath}/producer/remove?id=${producer.id}" class="btn btn-link text-danger">Delete</a>
         </div> 
   </div>   
 </div>

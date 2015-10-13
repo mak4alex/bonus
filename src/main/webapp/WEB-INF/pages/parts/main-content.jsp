@@ -25,7 +25,7 @@
         <div class="col-sm-4">
             <h2 class="lead" >Work with Souvenirs</h2>
             <div class="btn-group btn-group-justified" role="group" aria-label="search-buttons">
-                <a class="btn btn-primary" href="${pageContext.request.contextPath}/producer/create">Create Souvenir</a>
+                <a class="btn btn-primary" href="${pageContext.request.contextPath}/souvenir/create">Create Souvenir</a>
                 <a class="btn btn-primary" href="${pageContext.request.contextPath}/souvenir">View Souvenirs</a>
             </div>
         </div>

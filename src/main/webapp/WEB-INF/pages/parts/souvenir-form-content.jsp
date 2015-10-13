@@ -33,7 +33,7 @@
             <div class="form-group">
                 <label for="producer-id" class="col-sm-2 control-label" >Producer:</label>
                 <div class="col-sm-10">
-                    <select id="producer-id" name="producer-id" class="form-control">
+                    <select id="producer-id" name="producer-id" class="form-control" required>
                         <c:forEach var="producer" items="${producers}">
                             <option value="${producer.id}" >${producer.name}</option>                       
                         </c:forEach>
