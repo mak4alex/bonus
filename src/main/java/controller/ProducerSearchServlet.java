@@ -14,6 +14,13 @@ import javax.servlet.http.HttpServletResponse;
 import model.Producer;
 import model.Souvenir;
 
+/**
+ *
+ * class ProducerSearchServlet предоставляет
+ * поиск производителей по максимальной цене сувенира и
+ * году производства сувенира.
+ *
+ */
 
 public class ProducerSearchServlet extends HttpServlet {
 

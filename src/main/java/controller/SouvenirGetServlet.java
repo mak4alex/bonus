@@ -20,6 +20,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Souvenir;
 
+/**
+ *
+ * class SouvenirGetServlet выводит
+ * сувенир при указании его
+ * идентификатора. Иначе выводится список
+ * всех сувениров.
+ *
+ */
 
 public class SouvenirGetServlet extends HttpServlet {
 

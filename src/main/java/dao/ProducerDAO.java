@@ -12,6 +12,16 @@ import java.util.logging.Logger;
 import model.Producer;
 
 
+/**
+ *
+ * class ProducerDAO служит для проведения
+ * опредация межру Producer и бд.
+ * Функционал ProducerDAO содржит набор
+ * CRUD(create, read, update, delete)
+ * методов.
+ *
+ */
+
 public class ProducerDAO {  
 
     public void insert(Producer producer) {

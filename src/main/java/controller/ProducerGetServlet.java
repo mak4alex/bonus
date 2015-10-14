@@ -13,6 +13,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Producer;
 
+/**
+ *
+ * class ProducerGetServlet выводит
+ * производителя при указании его
+ * идентификатора. Иначе выводится список
+ * всех производителей.
+ *
+ */
 
 public class ProducerGetServlet extends HttpServlet {
 

@@ -11,6 +11,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Producer;
 
+/**
+ *
+ * class ProducerPostServlet выводит
+ * форму для создания и редактирования
+ * производителя. А также сохраняет/создаёт
+ * производителя.
+ *
+ */
 
 public class ProducerPostServlet extends HttpServlet {
     

@@ -3,6 +3,13 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * class Producer представляет сущность производителя,
+ * Хранит в себе поля для идентификатора, названия,
+ * страны, списка сувениров.
+ */
+
 public class Producer {
 
     private int id;

@@ -7,6 +7,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ *
+ * class MainServlet выводит главную страницу
+ *
+ */
 
 public class MainServlet extends HttpServlet {
      

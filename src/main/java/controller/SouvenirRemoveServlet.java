@@ -11,6 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
+/**
+ *
+ * class SouvenirRemoveServlet удаляет
+ * сувенир по идентификатору.
+ *
+ */
+
+
+
 public class SouvenirRemoveServlet extends HttpServlet {
 
     private final SouvenirDAO souvenirDAO = new SouvenirDAO();

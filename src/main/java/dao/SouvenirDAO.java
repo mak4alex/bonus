@@ -10,6 +10,17 @@ import java.util.logging.Logger;
 import model.Souvenir;
 
 
+/**
+ *
+ * class SouvenirDAO служит для проведения
+ * опредация межру Souvenir и бд.
+ * Функционал SouvenirDAO содржит набор
+ * CRUD(create, read, update, delete)
+ * методов.
+ *
+ */
+
+
 public class SouvenirDAO {
 
     public void insert(Souvenir souvenir) {

@@ -7,6 +7,13 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ *
+ * class DBConnection служит для предоставления
+ * соединения через метод getConnection.
+ *  Для соединения с бд(mysql) используется драйвер mysql.
+ *
+ */
 
 public class DBConnection {
     

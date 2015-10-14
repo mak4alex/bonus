@@ -13,6 +13,15 @@ import javax.servlet.http.HttpServletResponse;
 import model.Souvenir;
 
 
+/**
+ *
+ * class SouvenirSearchServlet предоставляет
+ * поиск сувениров по заданному производителю и
+ * стране производителя.
+ *
+ */
+
+
 public class SouvenirSearchServlet extends HttpServlet {
     
     ProducerDAO producerDAO = new ProducerDAO();

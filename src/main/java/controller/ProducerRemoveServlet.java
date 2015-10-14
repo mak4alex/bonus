@@ -10,6 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
+/**
+ *
+ * class ProducerRemoveServlet удаляет
+ * производителя по идентификатору.
+ *
+ */
+
 public class ProducerRemoveServlet extends HttpServlet {
    
     private final ProducerDAO producerDAO = new ProducerDAO();

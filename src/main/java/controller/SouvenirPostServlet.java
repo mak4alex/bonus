@@ -15,6 +15,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Souvenir;
 
+/**
+ *
+ * class SouvenirGetServlet выводит
+ * форму для создания и редактирования
+ * сувенира. А также сохраняет/создаёт
+ * сувенир.
+ *
+ */
 
 public class SouvenirPostServlet extends HttpServlet {
 
