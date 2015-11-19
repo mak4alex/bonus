@@ -9,14 +9,31 @@
         </div>
         <div class="panel-body">
             <form method="get" action="${pageContext.request.contextPath}/souvenir/search" >
-                <div class="form-group">
-                  <label for="souvernir-made-country">Made country:</label>
-                  <input type="text" class="form-control" name="souvernir-made-country" id="souvernir-made-country">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="souvenir-name">Name:</label>
+                            <input type="text" class="form-control" name="souvenir-name" id="souvenir-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="souvenir-price">Price:</label>
+                            <input type="number" min="0.00" step="0.01" class="form-control" name="souvenir-price" id="souvenir-price">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="souvenir-made-country">Made country:</label>
+                            <input type="text" class="form-control" name="souvenir-made-country" id="souvenir-made-country">
+                        </div>
+                        <div class="form-group">
+                            <label for="souvenir-producer-name">Producer name:</label>
+                            <input type="text" class="form-control" name="souvenir-producer-name" id="souvenir-producer-name">
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                  <label for="souvenir-producer-name">Producer name:</label>
-                  <input type="text" class="form-control" name="souvenir-producer-name" id="souvenir-producer-name">
-                </div>
+
+
                 <button type="submit" class="btn btn-info">Search</button>
             </form>           
         </div>        

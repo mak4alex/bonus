@@ -9,14 +9,29 @@
         </div>
         <div class="panel-body">
             <form method="get" action="${pageContext.request.contextPath}/producer/search" >
-                <div class="form-group">
-                  <label for="souvernir-max-price">Souvenir max price:</label>
-                  <input type="number" min="0.00" step="0.01" class="form-control" name="souvernir-max-price" id="souvernir-max-price">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="producer-name">Producer name:</label>
+                            <input type="text" class="form-control" name="producer-name" id="producer-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="producer-country">Producer country:</label>
+                            <input type="text" class="form-control" name="producer-country" id="producer-country">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="souvenir-max-price">Souvenir max price:</label>
+                            <input type="number" min="0.00" step="0.01" class="form-control" name="souvenir-max-price" id="souvenir-max-price">
+                        </div>
+                        <div class="form-group">
+                            <label for="souvenir-made-year">Souvenir made in year:</label>
+                            <input type="number" min="0" step="1" class="form-control" name="souvenir-made-year" id="souvenir-made-year">
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                  <label for="souvenir-made-year">Souvenir made in year:</label>
-                  <input type="number" min="0" step="1" class="form-control" name="souvenir-made-year" id="souvenir-made-year">
-                </div>
+
                 <button type="submit" class="btn btn-info">                    
                     Search
                 </button>
