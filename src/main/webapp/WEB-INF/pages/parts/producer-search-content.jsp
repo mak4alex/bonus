@@ -44,23 +44,27 @@
                 </ul>        
             </c:when>
             <c:otherwise>
-                <table class="table">
-                    <tr>
-                        <th>#id</th>
-                        <th>Name</th>
-                        <th>Country</th>
-                        <th>Edit</th>
-                        <th>Remove</th>
-                    </tr>
-                    <c:forEach var="producer" items="${producers}">
+                <table id="sortable-table" class="table table-striped tablesorter">
+                    <thead>
                         <tr>
-                            <td>${producer.id}</td>                                
-                            <td><a href="${pageContext.request.contextPath}/producer?id=${producer.id}">${producer.name}</a></td>
-                            <td>${producer.country}</td>  
-                            <td><a href="${pageContext.request.contextPath}/producer/create?id=${producer.id}" class="btn btn-link text-warning">Edit</a></td>
-                            <td class="text-danger"><a href="${pageContext.request.contextPath}/producer/remove?id=${producer.id}" class="btn btn-link text-danger">Delete</a></td>
+                            <th>#id</th>
+                            <th>Name</th>
+                            <th>Country</th>
+                            <th>Edit</th>
+                            <th>Remove</th>
                         </tr>
-                    </c:forEach>
+                    </thead>
+                    <tbody>
+                        <c:forEach var="producer" items="${producers}">
+                            <tr>
+                                <td>${producer.id}</td>
+                                <td><a href="${pageContext.request.contextPath}/producer?id=${producer.id}">${producer.name}</a></td>
+                                <td>${producer.country}</td>
+                                <td><a href="${pageContext.request.contextPath}/producer/create?id=${producer.id}" class="btn btn-link text-warning">Edit</a></td>
+                                <td class="text-danger"><a href="${pageContext.request.contextPath}/producer/remove?id=${producer.id}" class="btn btn-link text-danger">Delete</a></td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
                 </table>
             </c:otherwise>
         </c:choose>       

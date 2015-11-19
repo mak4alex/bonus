@@ -17,25 +17,29 @@
                 </ul>        
             </c:when>
             <c:otherwise>
-                <table class="table">
-                    <tr>
-                        <th>#id</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Made date</th>
-                        <th>Edit</th>
-                        <th>Remove</th>                        
-                    </tr>
-                    <c:forEach var="souvenir" items="${producer.souvenirs}">
+                <table id="sortable-table" class="table table-striped tablesorter">
+                    <thead>
                         <tr>
-                            <td>${souvenir.id}</td>                                
-                            <td><a href="${pageContext.request.contextPath}/souvenir?id=${souvenir.id}">${souvenir.name}</a></td>
-                            <td>${souvenir.price}$</td>
-                            <td><fmt:formatDate pattern="dd.MM.yyyy" value="${souvenir.madeDate}"/></td>  
-                            <td><a href="${pageContext.request.contextPath}/souvenir/create?id=${souvenir.id}" class="btn btn-link text-warning">Edit</a></td>
-                            <td class="text-danger"><a href="${pageContext.request.contextPath}/souvenir/remove?id=${souvenir.id}" class="btn btn-link text-danger">Delete</a></td>
+                            <th>#id</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Made date</th>
+                            <th>Edit</th>
+                            <th>Remove</th>
                         </tr>
-                    </c:forEach>
+                    </thead>
+                    <tbody>
+                        <c:forEach var="souvenir" items="${producer.souvenirs}">
+                            <tr>
+                                <td>${souvenir.id}</td>
+                                <td><a href="${pageContext.request.contextPath}/souvenir?id=${souvenir.id}">${souvenir.name}</a></td>
+                                <td>${souvenir.price}$</td>
+                                <td><fmt:formatDate pattern="dd/MM/yyyy" value="${souvenir.madeDate}"/></td>
+                                <td><a href="${pageContext.request.contextPath}/souvenir/create?id=${souvenir.id}" class="btn btn-link text-warning">Edit</a></td>
+                                <td class="text-danger"><a href="${pageContext.request.contextPath}/souvenir/remove?id=${souvenir.id}" class="btn btn-link text-danger">Delete</a></td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
                 </table>
             </c:otherwise>
         </c:choose>       

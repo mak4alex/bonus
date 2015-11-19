@@ -1,0 +1,25 @@
+table.tablesorter {
+	border: 1px solid #000;
+}
+table.tablesorter th {
+	text-align: left;
+	padding: 5px;
+}
+table.tablesorter td {
+	padding: 5px;
+}
+table.tablesorter .header {
+	background: url(bg.png) no-repeat;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #000;
+	border-top: 1px solid #FFF;
+	padding-left: 30px;
+	padding-top: 8px;
+	height: auto;
+}
+table.tablesorter .headerSortUp {
+	background: url(asc.png) no-repeat;
+}
+table.tablesorter .headerSortDown {
+	background: url(desc.png) no-repeat;
+}
