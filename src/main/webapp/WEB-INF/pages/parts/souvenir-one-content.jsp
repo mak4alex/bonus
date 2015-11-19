@@ -6,7 +6,7 @@
             <h3 class="panel-title">${souvenir.name}</h3>
         </div>
         <ul class="list-group">
-            <li class="list-group-item">Price: {souvenir.price}$</li>
+            <li class="list-group-item">Price: ${souvenir.price}$</li>
             <li class="list-group-item">Made date: <fmt:formatDate pattern="dd.MM.yyyy" value="${souvenir.madeDate}"/></li>
             <li class="list-group-item">Producer: <a href="${pageContext.request.contextPath}/producer?id=${souvenir.producerId}" class="btn btn-link text-warning">${souvenir.producer.name}</a></li>
         </ul>
