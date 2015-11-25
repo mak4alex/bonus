@@ -1,15 +1,13 @@
-package controller;
+package controllers;
 
 
 import dao.ProducerDAO;
 import dao.SouvenirDAO;
 import model.Souvenir;
+import servlet.Controller;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,15 +21,14 @@ import java.util.stream.Collectors;
  */
 
 
-public class SouvenirSearchServlet extends HttpServlet {
-    
-    ProducerDAO producerDAO = new ProducerDAO();
-    SouvenirDAO souvenirDAO = new SouvenirDAO();
+public class SouvenirSearchCtrl implements Controller {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        ProducerDAO producerDAO = new ProducerDAO();
+        SouvenirDAO souvenirDAO = new SouvenirDAO();
+
+
         List<Souvenir> souvenirs = souvenirDAO.selectAll();
         souvenirs.forEach( souvenir -> souvenir.setProducer(producerDAO.selectById(souvenir.getProducerId())));
 
@@ -47,11 +44,12 @@ public class SouvenirSearchServlet extends HttpServlet {
                         souvenir.getProducer().getCountry().contains(souvenirMadeCountry))
                 .filter(souvenir -> souvenirProducerName.isEmpty() || souvenir.getProducer().getName().contains(souvenirProducerName))
                 .collect(Collectors.toList());
-           
+
         request.setAttribute("souvenirs", souvenirs);
-        getServletContext()
+        request.getServletContext()
                 .getRequestDispatcher("/WEB-INF/pages/souvenir-search.jsp")
-                .forward(request, response);         
-    }  
+                .forward(request, response);
+    }
+
 
 }

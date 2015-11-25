@@ -1,36 +1,25 @@
-package controller;
+package controllers;
 
 
 import dao.ProducerDAO;
 import dao.SouvenirDAO;
 import model.Producer;
+import servlet.Controller;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- *
- * class ProducerSearchServlet предоставляет
- * поиск производителей по максимальной цене сувенира и
- * году производства сувенира.
- *
- */
 
-public class ProducerSearchServlet extends HttpServlet {
+public class ProducerSearchCtrl implements Controller {
 
-    ProducerDAO producerDAO = new ProducerDAO();
-    SouvenirDAO souvenirDAO = new SouvenirDAO();
-
-    
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        ProducerDAO producerDAO = new ProducerDAO();
+        SouvenirDAO souvenirDAO = new SouvenirDAO();
 
         String producerNameParam = request.getParameter("producer-name") != null ? request.getParameter("producer-name") :  "";
         String producerCountryParam = request.getParameter("producer-country") != null ? request.getParameter("producer-country") :  "";
@@ -56,10 +45,8 @@ public class ProducerSearchServlet extends HttpServlet {
 
         request.setAttribute("producers", producers);
 
-        getServletContext()
+        request.getServletContext()
                 .getRequestDispatcher("/WEB-INF/pages/producer-search.jsp")
-                .forward(request, response);        
-        
+                .forward(request, response);
     }
-
 }
