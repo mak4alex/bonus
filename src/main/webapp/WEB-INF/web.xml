@@ -5,60 +5,12 @@
         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
         version="3.0">
     <servlet>
-        <servlet-name>MainServlet</servlet-name>
-        <servlet-class>controller.MainServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ProducerGetServlet</servlet-name>
-        <servlet-class>controller.ProducerGetServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ProducerRemoveServlet</servlet-name>
-        <servlet-class>controller.ProducerRemoveServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>SouvenirGetServlet</servlet-name>
-        <servlet-class>controller.SouvenirGetServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>SouvenirRemoveServlet</servlet-name>
-        <servlet-class>controller.SouvenirRemoveServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ProducerPostServlet</servlet-name>
-        <servlet-class>controller.ProducerPostServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>SouvenirPostServlet</servlet-name>
-        <servlet-class>controller.SouvenirPostServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ProducerSearchServlet</servlet-name>
-        <servlet-class>controller.ProducerSearchServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>SouvenirSearchServlet</servlet-name>
-        <servlet-class>controller.SouvenirSearchServlet</servlet-class>
+        <servlet-name>AppServlet</servlet-name>
+        <servlet-class>servlet.AppServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>MainServlet</servlet-name>
+        <servlet-name>AppServlet</servlet-name>
         <url-pattern>/</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ProducerGetServlet</servlet-name>
-        <url-pattern>/producer</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ProducerRemoveServlet</servlet-name>
-        <url-pattern>/producer/remove</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SouvenirGetServlet</servlet-name>
-        <url-pattern>/souvenir</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SouvenirRemoveServlet</servlet-name>
-        <url-pattern>/souvenir/remove</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>default</servlet-name>
@@ -71,22 +23,6 @@
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>*.png</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ProducerPostServlet</servlet-name>
-        <url-pattern>/producer/create</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SouvenirPostServlet</servlet-name>
-        <url-pattern>/souvenir/create</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ProducerSearchServlet</servlet-name>
-        <url-pattern>/producer/search</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SouvenirSearchServlet</servlet-name>
-        <url-pattern>/souvenir/search</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

@@ -1,13 +1,3 @@
-table.tablesorter {
-	border: 1px solid #000;
-}
-table.tablesorter th {
-	text-align: left;
-	padding: 5px;
-}
-table.tablesorter td {
-	padding: 5px;
-}
 table.tablesorter .header {
 	background: url(bg.png) no-repeat;
 	border-left: 1px solid #FFF;

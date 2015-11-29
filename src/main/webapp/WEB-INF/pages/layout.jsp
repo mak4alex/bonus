@@ -10,6 +10,7 @@
     <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/jquery.tablesorter.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/Chart.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/app.js"></script>
 </head>
 <body>    
