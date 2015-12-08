@@ -26,16 +26,13 @@ public class AppServlet extends HttpServlet {
     }
 
 
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
         try {
             String path = req.getRequestURI();
             String faviconPath = "/favicon.ico";
-
             System.out.println("Path is: " + path);
-
 
             if (getControllersMap.containsKey(path)) {
                 getControllersMap.get(path).execute(req, res);
@@ -47,9 +44,8 @@ public class AppServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-
-
     }
+
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -57,7 +53,6 @@ public class AppServlet extends HttpServlet {
         try {
             String path = req.getRequestURI();
             String faviconPath = "/favicon.ico";
-
             System.out.println("Path is: " + path);
 
             if (postControllersMap.containsKey(path)) {
@@ -92,6 +87,5 @@ public class AppServlet extends HttpServlet {
         postControllersMap.put("/producer/create", new ProducerPostCtrl());
         postControllersMap.put("/souvenir/create", new SouvenirPostCtrl());
     }
-
 
 }
