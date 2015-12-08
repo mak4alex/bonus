@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class AppServlet extends HttpServlet {
@@ -41,7 +43,8 @@ public class AppServlet extends HttpServlet {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            res.sendRedirect(req.getContextPath() + "/500");
+            Logger.getLogger(AppServlet.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
 
     }
@@ -62,7 +65,8 @@ public class AppServlet extends HttpServlet {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            res.sendRedirect(req.getContextPath() + "/500");
+            Logger.getLogger(AppServlet.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
 
     }
@@ -80,8 +84,9 @@ public class AppServlet extends HttpServlet {
         getControllersMap.put("/souvenir/remove", new SouvenirRemoveCtrl());
         getControllersMap.put("/souvenir/search", new SouvenirSearchCtrl());
         getControllersMap.put("/404", new NoSuchPageCtrl());
-
+        getControllersMap.put("/500", new ServerErrorCtrl());
     }
+
 
     private void fillGetControllersMap() {
         postControllersMap.put("/producer/create", new ProducerPostCtrl());
